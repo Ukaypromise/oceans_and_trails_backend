@@ -46,6 +46,7 @@ class Api::V1::ReservationsController < ApplicationController
 
   # DELETE /reservations/1 or /reservations/1.json
   def destroy
+    @reservation = Reservation.find(params[:id])
     @reservation.destroy
 
     respond_to do |format|
@@ -63,6 +64,6 @@ class Api::V1::ReservationsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def reservation_params
-    params.require(:reservation).permit(:startDate, :endDate)
+    params.require(:reservation).permit(:startDate, :endDate, :tour_id).with_defaults(user_id: current_user.id)
   end
 end
