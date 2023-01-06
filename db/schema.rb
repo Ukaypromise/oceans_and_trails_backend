@@ -19,10 +19,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_05_194056) do
     t.datetime "endDate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "users_id", null: false
-    t.bigint "tours_id", null: false
-    t.index ["tours_id"], name: "index_reservations_on_tours_id"
-    t.index ["users_id"], name: "index_reservations_on_users_id"
+    t.bigint "user_id", null: false
+    t.bigint "tour_id", null: false
+    t.index ["tour_id"], name: "index_reservations_on_tours_id"
+    t.index ["user_id"], name: "index_reservations_on_users_id"
   end
 
   create_table "tours", force: :cascade do |t|
@@ -41,6 +41,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_05_194056) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "reservations", "tours", column: "tours_id"
-  add_foreign_key "reservations", "users", column: "users_id"
+  add_foreign_key "reservations", "tours"
+  add_foreign_key "reservations", "users"
 end

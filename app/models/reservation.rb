@@ -1,4 +1,4 @@
 class Reservation < ApplicationRecord
-  belong_to :user
-  belong_to :tour
+  belongs_to :user
+  belongs_to :tour
 end
