@@ -1,9 +1,9 @@
 class ReservationsController < ApplicationController
-  before_action :set_reservation, only: %i[show edit update destroy]
+  before_action :authenticate_user!
 
   # GET /reservations or /reservations.json
   def index
-    @reservations = Reservation.all
+    @reservations = current_user.reservations.all
   end
 
   # GET /reservations/1 or /reservations/1.json

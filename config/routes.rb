@@ -4,16 +4,20 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :tours
-      resources :users
-      resources :reservations
+      resources :users do
+        resources :reservations
+      end
     end
   end
-  resources :reservations
-  resources :tours
-  resources :users
 
+  resources :tours
+ 
+  resources :users do
+    resources :reservations
+  end
   root 'tours#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
   # root "articles#index"
 end
+
