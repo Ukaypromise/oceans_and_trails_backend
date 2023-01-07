@@ -1,10 +1,8 @@
 class Api::V1::ReservationsController < ApplicationController
-  before_action :set_reservation, only: %i[show edit update destroy]
-
+  before_action :authenticate_user!
   # GET /reservations or /reservations.json
   def index
-    @reservations = Reservation.all
-    render json: @reservations
+    render json: current_user.reservations.all
   end
 
   # GET /reservations/1 or /reservations/1.json
@@ -48,6 +46,7 @@ class Api::V1::ReservationsController < ApplicationController
 
   # DELETE /reservations/1 or /reservations/1.json
   def destroy
+    @reservation = Reservation.find(params[:id])
     @reservation.destroy
 
     respond_to do |format|
@@ -65,6 +64,6 @@ class Api::V1::ReservationsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def reservation_params
-    params.require(:reservation).permit(:startDate, :endDate)
+    params.require(:reservation).permit(:startDate, :endDate, :tour_id).with_defaults(user_id: current_user.id)
   end
 end
