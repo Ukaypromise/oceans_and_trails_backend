@@ -1,7 +1,7 @@
 require 'swagger_helper'
 
 describe 'Log_in API' do
-  path 'api/v1/users/sessions' do
+  path '/sessions' do
     post 'User sign-in' do
       tags 'login'
       consumes 'application/json'
@@ -34,7 +34,7 @@ describe 'Log_in API' do
 end
 
 describe 'Sign_up API' do
-  path 'api/v1/users/registrations' do
+  path '/registrations' do
     post 'Creates an user' do
       tags 'registration'
       consumes 'application/json'
