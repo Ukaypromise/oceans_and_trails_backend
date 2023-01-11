@@ -45,7 +45,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :reservations
   end
-  root 'tours#index'
+  root 'api/v1/tours#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
   # root "articles#index"
