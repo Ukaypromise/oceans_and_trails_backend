@@ -32,7 +32,7 @@ class Api::V1::Users::SessionsController < Devise::SessionsController
 
   # DELETE /resource/sign_out
 
-  protected
+  # protected
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_in_params
