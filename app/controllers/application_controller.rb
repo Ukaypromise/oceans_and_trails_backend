@@ -6,4 +6,12 @@ class ApplicationController < ActionController::API
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[name email password])
   end
+
+  def render_jsonapi_response(resource)
+    if resource.errors.empty?
+      render jsonapi: resource
+    else
+      render jsonapi_errors: resource.errors, status: 400
+    end
+  end
 end

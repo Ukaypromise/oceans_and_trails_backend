@@ -1,13 +1,13 @@
 class Api::V1::UsersController < ApplicationController
-  before_action :authenticate_api_v1_user!
+  before_action :authenticate_user!
 
   # GET /users or /users.json
   def index
-    render json: current_api_v1_user, status: :ok
+    render json: current_user, status: :ok
   end
 
   # # GET /users/1 or /users/1.json
-  # def show; end
+  def show; end
 
   # # GET /users/new
   # def new
