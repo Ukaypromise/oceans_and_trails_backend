@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
    namespace :api do
     namespace :v1 do
-      devise_for :users, path: '', path_names: {
+      devise_for :users, path: '/api/v1/users', path_names: {
         sign_in: 'login',
         sign_out: 'logout',
         registrations: 'signup'
