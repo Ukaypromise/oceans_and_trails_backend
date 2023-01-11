@@ -13,15 +13,6 @@ class Api::V1::UsersController < ApplicationController
   rescue ActiveRecord::RecordNotFound
     render json: { errors: 'User not found' }, status: :not_found
   end
-end
-
-
-
-
-
-
-
-
 
 
   # GET /users or /users.json
