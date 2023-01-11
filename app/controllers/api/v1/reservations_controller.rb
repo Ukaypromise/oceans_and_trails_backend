@@ -1,8 +1,8 @@
 class Api::V1::ReservationsController < ApplicationController
-  before_action :authenticate_api_v1_user!
+  before_action :authenticate_user!
   # GET /reservations or /reservations.json
   def index
-    render json: current_api_v1_user.reservations.all
+    render json: current_user.reservations.all
   end
 
   # GET /reservations/1 or /reservations/1.json
