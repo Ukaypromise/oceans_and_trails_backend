@@ -10,8 +10,8 @@ Rails.application.routes.draw do
         sign_in: 'login',
         sign_out: 'logout',
         sign_up: 'signup'
-        }, controllers: { sessions: 'api/v1/users/sessions',
-         registrations: 'api/v1/users/registrations' }  
+        }, controllers: { sessions: 'users/sessions',
+         registrations: 'users/registrations' }  
       end
     end
 
@@ -40,10 +40,10 @@ Rails.application.routes.draw do
     end
   end
 
-  # resources :tours
+  resources :tours
  
-  # resources :users do
-  #   resources :reservations
+  resources :users do
+    resources :reservations
   end
   root 'tours#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
