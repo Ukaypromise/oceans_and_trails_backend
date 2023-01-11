@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   mount Rswag::Ui::Engine => '/api-docs'
   mount Rswag::Api::Engine => '/api-docs'
 
-   namespace :api do
-    namespace :v1 do
+  #  namespace :api do
+  #   namespace :v1 do
       devise_for :users, path: '', path_names: {
         sign_in: 'login',
         sign_out: 'logout',
@@ -40,10 +40,10 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :tours
+  # resources :tours
  
-  resources :users do
-    resources :reservations
+  # resources :users do
+  #   resources :reservations
   end
   root 'tours#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
