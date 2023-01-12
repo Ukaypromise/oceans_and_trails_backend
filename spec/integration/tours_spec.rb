@@ -65,10 +65,10 @@ describe 'Tours API' do
           run_test!
         end
     
-        # response '404', 'tour not found' do
-        #   let(:id) { 'invalid' }
-        #   run_test!
-        # end
+        response '404', 'tour not found' do
+          let(:id) { 'invalid' }
+          run_test!
+        end
      end
       end
     
