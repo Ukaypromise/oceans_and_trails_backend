@@ -39,3 +39,6 @@ tour28 = Tour.create(tourName:'North American Tour', picture: 'https://picsum.ph
 
 Reservation.create(user_id: user1.id, tour_id: tour1.id, startDate: '2021-01-01', endDate: '2021-01-05')
 Reservation.create(user: User2, tour: tour2, startDate: '2021-01-01', endDate: '2021-01-05')
+Reservation.create(user: User2, tour: tour2, startDate: '2022-01-01', endDate: '2022-01-05')
+Reservation.create(user_id: user1.id, tour_id: tour1.id, startDate: '2022-01-01', endDate: '2022-01-05')
+Reservation.create(user_id: user1.id, tour_id: tour1.id, startDate: '2023-01-01', endDate: '2023-01-05')
