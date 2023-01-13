@@ -18,15 +18,16 @@ Rails.application.routes.draw do
     end
   end
 
-  namespace :api, defaults: { format: :json } do
+  namespace :api do
     namespace :v1 do
       resources :tours
       resources :users, only: %w[show, index] do
-        resources :reservations
+        resources :reservations, only: %w[create index show destroy]
       end
     end
   end
   root 'api/v1/tours#index'
+  resources :reservations
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
   # root "articles#index"
