@@ -9,9 +9,9 @@ class Api::V1::ReservationsController < ApplicationController
   def show; end
 
   # GET /reservations/new
-  def new
-    @reservation = Reservation.new
-  end
+  # def new
+  #   @reservation = Reservation.new
+  # end
 
   # GET /reservations/1/edit
   def edit; end

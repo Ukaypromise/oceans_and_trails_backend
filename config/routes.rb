@@ -45,6 +45,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
+      resources :reservations, only: [:create]
       resources :tours
       resources :users, only: %w[show, index] do
         resources :reservations
