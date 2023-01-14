@@ -2,13 +2,14 @@ require 'swagger_helper'
 
 describe 'Reservations API' do
   before(:each) do
-   user1 = User.create(name: 'John', email: 'john@gmail.com', password: '123456')
-   user1.save!
+    user1 = User.create(name: 'John', email: 'john@gmail.com', password: '123456')
+    user1.save!
   end
 
   before(:each) do
-   tour2 = Tour.create(tourName: 'North American Tour', picture: 'https://picsum.photos/200/300', description: 'Visit New York, Philadelphia and Vermont', hotel: 'Ritz continental', price: 3350.40)
-   tour2.save!
+    tour2 = Tour.create(tourName: 'North American Tour', picture: 'https://picsum.photos/200/300',
+                        description: 'Visit New York, Philadelphia and Vermont', hotel: 'Ritz continental', price: 3350.40)
+    tour2.save!
   end
 
   path '/api/v1/users/{id}/reservations' do
@@ -30,9 +31,10 @@ describe 'Reservations API' do
         end
 
         let!(:tour2) do
-          Tour.create(tourName: 'North American Tour', picture: 'https://picsum.photos/200/300', description: 'Visit New York, Philadelphia and Vermont', hotel: 'Ritz continental', price: 3350.40)
+          Tour.create(tourName: 'North American Tour', picture: 'https://picsum.photos/200/300',
+                      description: 'Visit New York, Philadelphia and Vermont', hotel: 'Ritz continental', price: 3350.40)
         end
-        
+
         let(:reservation) do
           Reservation.create(user: user1, tour: tour2, startDate: '2021-01-01', endDate: '2021-01-05')
         end

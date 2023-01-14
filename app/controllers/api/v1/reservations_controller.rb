@@ -18,15 +18,13 @@ class Api::V1::ReservationsController < ApplicationController
 
   # POST /reservations or /reservations.json
   def create
-    def create
-      @reservation = Reservation.new(reservation_params)
-  
-      if @reservation.save
-        # render :create, status: :created
-        render json: @reservation, status: :created
-      else
-        render json: @reservation.errors, status: :unprocessable_entity
-      end
+    @reservation = Reservation.new(reservation_params)
+
+    if @reservation.save
+      # render :create, status: :created
+      render json: @reservation, status: :created
+    else
+      render json: @reservation.errors, status: :unprocessable_entity
     end
   end
 
@@ -49,7 +47,6 @@ class Api::V1::ReservationsController < ApplicationController
     @reservation.destroy
 
     render json: { message: 'Reservation has been successfully deleted' }
-    
   end
 
   private
