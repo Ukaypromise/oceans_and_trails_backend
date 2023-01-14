@@ -14,18 +14,10 @@ class Api::V1::UsersController < ApplicationController
     render json: { errors: 'User not found' }, status: :not_found
   end
 
-
   # GET /users or /users.json
   # def index
   #   render json: current_api_v1_user, status: :ok
   # end
-
-
-
-
-
-
-
 
   # # GET /users/1 or /users/1.json
   def show; end
