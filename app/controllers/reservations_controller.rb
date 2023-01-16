@@ -7,17 +7,6 @@ class ReservationsController < ApplicationController
     render json: @reservations
   end
 
-  # # GET /reservations/1 or /reservations/1.json
-  # def show; end
-
-  # # GET /reservations/new
-  # def new
-  #   @reservation = Reservation.new
-  # end
-
-  # # GET /reservations/1/edit
-  # def edit; end
-
   # POST /reservations or /reservations.json
   def create
     @reservation = Reservation.new(reservation_params)
