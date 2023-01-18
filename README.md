@@ -130,21 +130,21 @@ run npm start and when asked for a new port for local host type "y"
 
 👤 **Addis Tsega **
 
-- GitHub: [@xxx](https://github.com/)
+- GitHub: [Aseadd](https://github.com/Aseadd)
 - Twitter: [@xxx](https://twitter.com/)
-- LinkedIn: [xxx](https://linkedin.com/in/)
+- LinkedIn: [addis-tsega](https://www.linkedin.com/in/addis-tsega/)
 
 👤 **Amalia Gomez **
 
-- GitHub: [xxx](https://github.com/)
+- GitHub: [AmaliaGM](https://github.com/AmaliaGM)
 - Twitter: [xxx](https://twitter.com/)
-- LinkedIn: [](https://linkedin.com/in/)
+- LinkedIn: [Maria-Amalia-Gomez](https://www.linkedin.com/in/maria-amalia-gomez-moro/)
 
 👤 **Promise Uka **
 
-- GitHub: [xxx](https://github.com/)
+- GitHub: [Ukaypromise](https://github.com/Ukaypromise)
 - Twitter: [xxx](https://twitter.com/)
-- LinkedIn: [](https://linkedin.com/in/)
+- LinkedIn: [Promiseuka](https://www.linkedin.com/in/promiseuka/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
