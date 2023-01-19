@@ -28,6 +28,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
+![Screen Shot 2023-01-19 at 13 39 26](https://user-images.githubusercontent.com/99816838/213545038-7add0919-d8d8-4d1b-b735-01c12966391a.png)
+![Screen Shot 2023-01-19 at 13 39 39](https://user-images.githubusercontent.com/99816838/213545051-78ef5ab8-594d-4c7b-a0eb-ec1c80543dec.png)
+![Screen Shot 2023-01-19 at 13 40 28](https://user-images.githubusercontent.com/99816838/213545070-08bcc4f5-3a5f-44b1-98d7-edda30d08c1c.png)
 
 
 
@@ -149,7 +152,7 @@ in the terminal for the front end: run npm start and when asked for a new port f
 👤 **Amalia Gomez **
 
 - GitHub: [AmaliaGM](https://github.com/AmaliaGM)
-- Twitter: [xxx](https://twitter.com/)
+- Twitter: [@AmaliaGomezMoro](https://twitter.com/AmaliaGomezMoro)
 - LinkedIn: [Maria-Amalia-Gomez](https://www.linkedin.com/in/maria-amalia-gomez-moro/)
 
 👤 **Promise Uka **
