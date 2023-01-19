@@ -62,14 +62,19 @@
 
 <!-- ### Key Features <a name="key-features"></a> -->
 
-## Kanban Board Initial state
+May find the link to:
+[Front end](https://github.com/Flunavgt/oceans_and_trails_frontend)
 
-Back End
+## Kanban Board 
+
+Link to [Kanban](https://github.com/users/Flunavgt/projects/3)
+
+Back End initial state
 
 ![Kanban backend](https://user-images.githubusercontent.com/99816838/213469351-438763f6-7fec-4c27-be98-4099bebeba89.png)
 
 
-Front End
+Front End initial state
 
 ![Kanban frontend](https://user-images.githubusercontent.com/99816838/213469413-198fa1a4-d75a-4bca-bb7f-cbdb4b21423a.png)
 
