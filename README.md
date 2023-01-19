@@ -1,7 +1,9 @@
 <a name="readme-top"></a>
 
+# 📖 Oceans and Trails <a name="about-project"></a>
 
 
+** Oceans and Trails it's an app which helps you reserve and create travel packages, this app consist of a front end developed in react/redux and a back end developed with Ruby on Rails to create an API.
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -26,11 +28,8 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Oceans and Trails <a name="about-project"></a>
 
 
-
-** Oceans and Trails it's an app which helps you reserve and create travel packages, this app consist of a front end developed in react/redux and a back end developed with Ruby on Rails to create an API.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -61,7 +60,7 @@
 
 <!-- Features -->
 
-### Key Features <a name="key-features"></a>
+<!-- ### Key Features <a name="key-features"></a> -->
 
 ## Kanban Board Initial state
 
@@ -90,6 +89,10 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
+Make sure you have installed locally:
+Ruby 
+Nodejs
+
 <!--
 Example command:
 
@@ -100,11 +103,9 @@ Example command:
 
 ### Setup
 
-Clone this repository to your desired folder :
-git clone  h
+Clone this repository to your desired folder : git clone https://github.com/Flunavgt/oceans_and_trails_backend.git
 
-run bundle install
-run npm i
+run bundle install run npm i
 
 create application.yml under config and set Username and password for DB
 
@@ -112,16 +113,11 @@ run rails db:create
 
 run rails s
 
-clone frontend app:
-git clone 
-
+clone frontend app: git clone https://github.com/Flunavgt/oceans_and_trails_frontend.git
 
 run npm i
 
-
-in the terminal for the front end:
-run npm start and when asked for a new port for local host type "y"
-
+in the terminal for the front end: run npm start and when asked for a new port for local host type "y"
 
 
  -->
@@ -130,7 +126,7 @@ run npm start and when asked for a new port for local host type "y"
 
 <!-- AUTHORS -->
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 
 👤 **Federico Luna V. **
@@ -154,7 +150,7 @@ run npm start and when asked for a new port for local host type "y"
 👤 **Promise Uka **
 
 - GitHub: [Ukaypromise](https://github.com/Ukaypromise)
-- Twitter: [xxx](https://twitter.com/)
+- Twitter: [@PromiseUkay](https://twitter.com/PromiseUkay)
 - LinkedIn: [Promiseuka](https://www.linkedin.com/in/promiseuka/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
