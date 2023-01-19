@@ -138,7 +138,7 @@ in the terminal for the front end: run npm start and when asked for a new port f
 👤 **Addis Tsega **
 
 - GitHub: [Aseadd](https://github.com/Aseadd)
-- Twitter: [@xxx](https://twitter.com/)
+- Twitter: [@AdaTsega](https://twitter.com/AdaTsega)
 - LinkedIn: [addis-tsega](https://www.linkedin.com/in/addis-tsega/)
 
 👤 **Amalia Gomez **
