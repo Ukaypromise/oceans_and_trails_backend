@@ -140,7 +140,7 @@ rails s
 
 clone frontend app: git clone https://github.com/Flunavgt/oceans_and_trails_frontend.git
 
-Navigate to correct directory and execute:
+Navigate to correct directory:
 
 Add Dependencies
 ```sh
@@ -155,9 +155,13 @@ when asked for a new port for local host type "y"
 
 ## Testing
 You may test by executing:
+
 rspec ./spec/models
+
 rspec ./spec/requests
+
 rails rswag   
+
 
  -->
 
