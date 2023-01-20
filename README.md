@@ -163,6 +163,11 @@ rspec ./spec/requests
 rails rswag   
 
 
+## API documentation
+
+https://oceans-api.onrender.com/api-docs/index.html
+
+
  -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
