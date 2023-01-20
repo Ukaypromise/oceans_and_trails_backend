@@ -90,7 +90,6 @@ Front End initial state
 ## 💻 Getting Started <a name="getting-started"></a>
 
 
-
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
@@ -113,20 +112,52 @@ Example command:
 
 Clone this repository to your desired folder : git clone https://github.com/Flunavgt/oceans_and_trails_backend.git
 
-run bundle install run npm i
+Execute on console making sure you are in the correct directory:
+```sh
+bundle install
+npm i
+```
 
-create application.yml under config and set Username and password for DB
+-create a file named application.yml under config folder and write the following Variables:
+```sh
+USER_NAME = “xxx” (xxx replace with your Postgres user name)
+PASSWORD = “xxx” (xxx replace with your Postgres password)
+```
+-On console execute
+```sh
+rails db:create
+rails db:migrate
+rails db:seed
+```
 
-run rails db:create
-
-run rails s
+-Create Master key:
+```sh
+EDITOR="mate --wait" bin/rails credentials:edit
+```
+```sh
+rails s
+```
 
 clone frontend app: git clone https://github.com/Flunavgt/oceans_and_trails_frontend.git
 
-run npm i
+Navigate to correct directory and execute:
 
-in the terminal for the front end: run npm start and when asked for a new port for local host type "y"
+Add Dependencies
+```sh
+npm i
+```
 
+```sh
+npm run dev
+```
+when asked for a new port for local host type "y"
+
+
+## Testing
+You may test by executing:
+rspec ./spec/models
+rspec ./spec/requests
+rails rswag   
 
  -->
 

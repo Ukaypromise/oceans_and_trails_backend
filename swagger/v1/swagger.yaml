@@ -4,7 +4,7 @@ info:
   title: API V1
   version: v1
 paths:
-  "/api/v1/users/1/reservations":
+  "/api/v1/users/{id}/reservations":
     post:
       summary: Creates a reservation
       tags:
@@ -13,7 +13,7 @@ paths:
       responses:
         '201':
           description: reservation created
-        '422':
+        '401':
           description: You need to sign in or sign up before continuing.
       requestBody:
         content:
@@ -151,7 +151,7 @@ paths:
                 - updated_at
         '404':
           description: tour not found
-  api/v1/users/sessions:
+  "/sessions":
     post:
       summary: User sign-in
       tags:
@@ -178,7 +178,7 @@ paths:
                   required:
                   - email
                   - password
-  api/v1/users/registrations:
+  "/registrations":
     post:
       summary: Creates an user
       tags:
@@ -211,7 +211,7 @@ paths:
                   - email
                   - password
 servers:
-- url: https://localhost:3000/api/v1/api-docs
+- url: https://localhost:3000/
   variables:
     defaultHost:
       default: www.example.com
