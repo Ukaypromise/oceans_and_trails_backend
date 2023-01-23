@@ -1,0 +1,217 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/users/{id}/reservations":
+    post:
+      summary: Creates a reservation
+      tags:
+      - reservations
+      parameters: []
+      responses:
+        '201':
+          description: reservation created
+        '401':
+          description: You need to sign in or sign up before continuing.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                startDate:
+                  type: string
+                endDate:
+                  type: string
+                user_id:
+                  type: integer
+                tour_id:
+                  type: integer
+              required:
+              - id
+              - startDate
+              - endDate
+              - user_id
+              - tour_id
+    get:
+      summary: List all reservations
+      tags:
+      - reservations
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    startDate:
+                      type: string
+                    endDate:
+                      type: string
+                    user_id:
+                      type: integer
+                    tour_id:
+                      type: integer
+                  required:
+                  - id
+                  - startDate
+                  - endDate
+                  - user_id
+                  - tour_id
+  "/api/v1/tours":
+    get:
+      summary: Retrieves Tours
+      tags:
+      - Tours
+      responses:
+        '200':
+          description: tours found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  tours:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                        tourName:
+                          type: string
+                        picture:
+                          type: string
+                        description:
+                          type: string
+                        hotel:
+                          type: string
+                        price:
+                          type: number
+                        created_at:
+                          type: string
+                        updated_at:
+                          type: string
+                required:
+                - tours
+        '404':
+          description: tours not found
+  api/v1/tours/{id}:
+    get:
+      summary: Retrieves a tour
+      tags:
+      - Tours
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: tour found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  tourName:
+                    type: string
+                  picture:
+                    type: string
+                  description:
+                    type: string
+                  hotel:
+                    type: string
+                  price:
+                    type: number
+                  created_at:
+                    type: string
+                  updated_at:
+                    type: string
+                required:
+                - id
+                - tourName
+                - picture
+                - description
+                - hotel
+                - price
+                - created_at
+                - updated_at
+        '404':
+          description: tour not found
+  "/sessions":
+    post:
+      summary: User sign-in
+      tags:
+      - login
+      parameters: []
+      responses:
+        '201':
+          description: user created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: object
+                  properties:
+                    email:
+                      type: string
+                    password:
+                      type: string
+                  required:
+                  - email
+                  - password
+  "/registrations":
+    post:
+      summary: Creates an user
+      tags:
+      - registration
+      parameters: []
+      responses:
+        '201':
+          description: user created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    email:
+                      type: string
+                    password:
+                      type: string
+                    password_confirmation:
+                      type: string
+                  required:
+                  - name
+                  - email
+                  - password
+servers:
+- url: https://localhost:3000/
+  variables:
+    defaultHost:
+      default: www.example.com
