@@ -1,5 +1,6 @@
 class Api::V1::ReservationsController < ApplicationController
   before_action :authenticate_user!
+
   # GET /reservations or /reservations.json
   def index
     render json: current_user.reservations.all
@@ -8,11 +9,6 @@ class Api::V1::ReservationsController < ApplicationController
   # GET /reservations/1 or /reservations/1.json
   def show; end
 
-  # GET /reservations/new
-  def new
-    @reservation = Reservation.new
-  end
-
   # GET /reservations/1/edit
   def edit; end
 
@@ -20,14 +16,11 @@ class Api::V1::ReservationsController < ApplicationController
   def create
     @reservation = Reservation.new(reservation_params)
 
-    respond_to do |format|
-      if @reservation.save
-        format.html { redirect_to reservation_url(@reservation), notice: 'Reservation was successfully created.' }
-        format.json { render :show, status: :created, location: @reservation }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @reservation.errors, status: :unprocessable_entity }
-      end
+    if @reservation.save
+      # render :create, status: :created
+      render json: @reservation, status: :created
+    else
+      render json: @reservation.errors, status: :unprocessable_entity
     end
   end
 
@@ -49,10 +42,7 @@ class Api::V1::ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
     @reservation.destroy
 
-    respond_to do |format|
-      format.html { redirect_to reservations_url, notice: 'Reservation was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    render json: { message: 'Reservation has been successfully deleted' }
   end
 
   private
